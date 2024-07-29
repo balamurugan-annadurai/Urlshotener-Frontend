@@ -31,7 +31,7 @@ const Contact = () => {
   })
   return (
     <div className="contact-container container" id='contact'>
-      <h3 className='text-center'>Contact us</h3>
+      <h3 className='text-center'>Get In Touch</h3>
       <div className="contact-content row d-flex justify-content-center">
         <div className="img col-xl-6 col-lg-6 col-12">
           <img src={contact} alt="" />
