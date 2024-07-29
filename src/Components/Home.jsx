@@ -121,9 +121,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <hr />
           <About />
-          <hr />
           <Contact/>
         </main>
       </div>
