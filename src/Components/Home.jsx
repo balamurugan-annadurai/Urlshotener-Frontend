@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import img from "../assets/HomeImg.jpg"
 import About from './About';
 import Contact from './Contact';
+import Footer from './Footer';
 
 const Home = () => {
 
@@ -122,7 +123,8 @@ const Home = () => {
             </div>
           </div>
           <About />
-          <Contact/>
+          <Contact />
+          <Footer/>
         </main>
       </div>
     </>

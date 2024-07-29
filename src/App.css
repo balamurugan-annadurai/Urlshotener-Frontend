@@ -319,7 +319,18 @@ header {
     font-size: 13px;
     color: #ed7632;
 }
-
+.footer-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .3);
+    background-color: #ffdfcc;
+    margin-top: 15px;
+}
+.footer-container h1{
+    margin-top: 10px;
+}
 @media screen and (min-width:947px) {
     .navbar {
         display: flex;
