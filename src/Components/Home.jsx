@@ -3,10 +3,12 @@ import img from "../assets/HomeImg.jpg"
 import About from './About';
 import Contact from './Contact';
 import Footer from './Footer';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
 
   const [isScroll, setIsScroll] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleClick = (event) => {
@@ -71,6 +73,13 @@ const Home = () => {
 
   }, [])
 
+  const signUp = () => {
+    navigate("/signup");
+  }
+
+  const login = () => {
+    navigate("/login");
+  }
   return (
     <>
       <div className="mobile-navbar-list">
@@ -94,15 +103,15 @@ const Home = () => {
                 <li><a href="#contact" className='black'>Contact</a></li>
               </ul>
               <div className="login-signUp-buttons">
-                <button className='login-button'>Login</button>
-                <button className='signup-button'>Signup</button>
+                <button className='login-button' onClick={login}>Login</button>
+                <button className='signup-button' onClick={signUp}>Signup</button>
               </div>
             </div>
             <div className="mobile-navbar">
               <i className='bx bx-menu menu'></i>
               <div className="login-signUp-buttons">
-                <button className='login-button'>Login</button>
-                <button className='signup-button'>Signup</button>
+                <button className='login-button' onClick={login}>Login</button>
+                <button className='signup-button' onClick={signUp}>Signup</button>
               </div>
             </div>
           </nav>
@@ -114,7 +123,7 @@ const Home = () => {
               <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-flex align-items-center">
                 <div className="intro-message">
                   <h1>Let's make with simply one click</h1>
-                  <button>Get started for free <i className='bx bx-right-arrow-alt'></i></button>
+                  <button onClick={()=> navigate("/signup")}>Get started for free <i className='bx bx-right-arrow-alt'></i></button>
                 </div>
               </div>
               <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
@@ -124,7 +133,7 @@ const Home = () => {
           </div>
           <About />
           <Contact />
-          <Footer/>
+          <Footer />
         </main>
       </div>
     </>

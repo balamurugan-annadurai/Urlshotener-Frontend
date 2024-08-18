@@ -2,6 +2,8 @@ import React from 'react'
 import contact from "../assets/contact.jpg"
 import * as yup from 'yup'
 import { useFormik } from 'formik'
+import { toast, Slide, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Contact = () => {
@@ -26,7 +28,18 @@ const Contact = () => {
 
 
     onSubmit: (values) => { // Function to handle form submission
+      formik.resetForm();
 
+      toast.success("Message send successful", {  // Notification
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        transition: Slide // Use Slide for right-side animation
+      });
     }
   })
   return (
@@ -75,6 +88,17 @@ const Contact = () => {
 
         </div>
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   )
 }

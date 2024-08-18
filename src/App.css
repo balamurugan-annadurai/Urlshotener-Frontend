@@ -1,18 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Lilita+One&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 html {
     scroll-behavior: smooth;
 }
-
+body{
+}
 header {
     position: sticky;
     top: 0;
+    background-color: #fff;
 }
 
 .fixed {
     overflow: hidden;
 }
-
+.read-only{
+    cursor:not-allowed;
+}
 .scrolled {
     background-color: #ffffff;
     transition: 1s;
@@ -272,12 +281,13 @@ header {
     background-color: #fff;
     padding: 40px 25px;
     border-radius: 15px;
-    box-shadow: 0px 15px 25px rgba(0,0,0,.2);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, .2);
     width: 70%;
     gap: 15px;
 }
 
-.form input,textarea {
+.form input,
+textarea {
     background-color: rgba(247, 246, 244, 255);
     width: 100%;
     padding: 10px 20px;
@@ -288,10 +298,13 @@ header {
     transition: .4s;
     font-weight: 600;
 }
-.form input:focus ,textarea:focus{
+
+.form input:focus,
+textarea:focus {
     border: 2px solid #ed7632;
 }
-.custom-btn{
+
+.custom-btn {
     width: 100%;
     padding: 10px 0;
     border: none;
@@ -304,8 +317,23 @@ header {
     margin-bottom: 5px;
     transition: opacity 0.3s;
 }
-.custom-btn:hover{
+
+.custom-btn:hover {
     opacity: 0.8;
+}
+.secondary-btn{
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    font-size: 17px;
+    font-weight: 600;
+    color: #ed7632;
+    border: 2px solid #ed7632;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 6px;
+    margin-bottom: 5px;
+    transition: opacity 0.3s;
 }
 .contact-container h3 {
     font-family: "Lilita One", sans-serif;
@@ -315,11 +343,13 @@ header {
     padding: 30px 0;
     letter-spacing: 5px;
 }
-.erro-msg{
+
+.erro-msg {
     font-size: 13px;
     color: #ed7632;
 }
-.footer-container{
+
+.footer-container {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -328,9 +358,160 @@ header {
     background-color: #ffdfcc;
     margin-top: 15px;
 }
-.footer-container h1{
+
+.footer-container h1 {
     margin-top: 10px;
 }
+
+.bg-color {
+    background-color: rgba(247, 246, 244, 255);
+}
+
+.outer-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, .1);
+    width: 350px;
+}
+
+p {
+    margin: 0;
+}
+
+.title {
+    font-size: 25px;
+    font-weight: 700;
+    color: #191919;
+}
+
+.text1 {
+    color: #696a6b;
+    font-weight: 600;
+    padding-bottom: 19px;
+    font-size: 14px;
+}
+
+.text2 {
+    color: #696a6b;
+    font-weight: 600;
+    padding-bottom: 13px;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.text2 span {
+    padding-left: 3px;
+    color: #ed7632;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.input-container i {
+    position: absolute;
+    margin-top: 13.5px;
+    left: 15px;
+    font-size: 18px;
+    color: #696a6b;
+}
+
+.input-container input {
+    background-color: rgba(247, 246, 244, 255);
+    width: 100%;
+    padding: 10px 20px;
+    padding-left: 45px;
+    border: 2px solid rgba(247, 246, 244, 255);
+    border-radius: 10px;
+    outline: none;
+    transition: .4s;
+    font-weight: 600;
+}
+
+.input-container input:focus {
+    border: 2px solid #ed7632;
+}
+
+.custom-btn {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    font-size: 17px;
+    font-weight: 600;
+    background-color: #ed7632;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 6px;
+    margin-bottom: 5px;
+    transition: opacity 0.3s;
+}
+
+.custom-btn:hover {
+    opacity: 0.8;
+}
+
+.erro-msg {
+    font-size: 13px;
+    color: #ed7632;
+}
+
+.forgot-password-text {
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 13px;
+    font-weight: 400;
+}
+
+.line {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+}
+
+.login {
+    font-size: 15px;
+}
+
+.not-found-page {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.not-found-page-img {
+    width: 400px;
+}
+
+.loading-container {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orange{
+    color: #ed7632;
+}
+/* Dashboard */
+
+
+
+
+
+
+
+
+
 @media screen and (min-width:947px) {
     .navbar {
         display: flex;
@@ -387,9 +568,11 @@ header {
         font-size: 15px;
         font-weight: 600;
     }
+
     .contact-content .img img {
         width: 100%;
     }
+
     .form {
         width: 80%;
     }
