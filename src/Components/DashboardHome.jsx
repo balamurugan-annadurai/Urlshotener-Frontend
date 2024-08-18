@@ -1,29 +1,27 @@
 import React from 'react'
 import BarGraph from './BarGraph';
 
-const DashboardHome = ({ dashboardData }) => {
+const DashboardHome = ({ dashboardData = {} }) => { 
 
-    console.log(dashboardData);
-    
-    const urlsCreatedPerDay = dashboardData.urlsPerDay;
-    const urlsCreatedPerMonth = dashboardData.urlsPerMonth;
-
-    const monthData = dashboardData.monthsData;
+    const urlsCreatedPerDay = dashboardData.urlsPerDay || [];
+    const urlsCreatedPerMonth = dashboardData.urlsPerMonth || [];
+    const monthData = dashboardData.monthsData || [];
 
     const shortLinksData = [
-        { month: 'January', count: monthData[0].length },
-        { month: 'February', count: monthData[1].length },
-        { month: 'March', count: monthData[2].length },
-        { month: 'April', count: monthData[3].length },
-        { month: 'May', count: monthData[4].length },
-        { month: 'June', count: monthData[5].length },
-        { month: 'July', count: monthData[6].length },
-        { month: 'August', count: monthData[7].length },
-        { month: 'September', count: monthData[8].length },
-        { month: 'October', count: monthData[9].length },
-        { month: 'November', count: monthData[10].length },
-        { month: 'December', count: monthData[11].length },
+        { month: 'January', count: monthData[0] ? monthData[0].length : 0 },
+        { month: 'February', count: monthData[1] ? monthData[1].length : 0 },
+        { month: 'March', count: monthData[2] ? monthData[2].length : 0 },
+        { month: 'April', count: monthData[3] ? monthData[3].length : 0 },
+        { month: 'May', count: monthData[4] ? monthData[4].length : 0 },
+        { month: 'June', count: monthData[5] ? monthData[5].length : 0 },
+        { month: 'July', count: monthData[6] ? monthData[6].length : 0 },
+        { month: 'August', count: monthData[7] ? monthData[7].length : 0 },
+        { month: 'September', count: monthData[8] ? monthData[8].length : 0 },
+        { month: 'October', count: monthData[9] ? monthData[9].length : 0 },
+        { month: 'November', count: monthData[10] ? monthData[10].length : 0 },
+        { month: 'December', count: monthData[11] ? monthData[11].length : 0 },
     ];
+
     return (
         <div className="dashboard-home">
             <div className="graph">
